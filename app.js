@@ -32,11 +32,11 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this stunning peony-topped candle brings bespoke fragrance and sculptural elegance to any sanctuary.(per piece price)",
         price: 499,
         images: [
-            "images/Peonyflowerjarcandle.png", 
-            "images/Peonyflowerjarcandle2.png",
-            "images/Peonyflowerjarcandle4.png",
-            "images/Peonyflowerjarcandle5.png",  
-            "images/Peonyflowerjarcandle6.png",
+            "Peonyflowerjarcandle.png", 
+            "Peonyflowerjarcandle2.png",
+            "Peonyflowerjarcandle4.png",
+            "Peonyflowerjarcandle5.png",  
+            "Peonyflowerjarcandle6.png",
         ],
         scentProfile: {
             top: "Fresh Petals, Spring Air",
@@ -51,10 +51,10 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this charming daisy-topped candle brings bespoke fragrance and whimsical elegance to any sanctuary.",
         price: 499,
         images: [
-            "images/daisyjar1.png", 
-            "images/daisyjar2.png",
-            "images/daisyjar3.png",
-            "images/daisyjar4.png",
+            "daisyjar1.png", 
+            "daisyjar2.png",
+            "daisyjar3.png",
+            "daisyjar4.png",
         ],
         scentProfile: {
             top: "light scents perceived immediately",
@@ -69,11 +69,11 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, these charming golden-lidded jars are available in a bespoke selection of curated fragrances to bring effortless luxury to any space.",
         price: 119,
         images: [
-            "images/goldlidjar6.png", 
-            "images/goldlidjar2.png",
-            "images/goldlidjar3.png",
-            "images/goldlidjar4.png",  
-            "images/goldlidjar5.png",
+            "goldlidjar6.png", 
+            "goldlidjar2.png",
+            "goldlidjar3.png",
+            "goldlidjar4.png",  
+            "goldlidjar5.png",
         ],
         scentProfile: {
             top: "Sparkling Citrus",
@@ -88,10 +88,10 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this romantic heart-topped candle is available in multiple fragrances to bring a warm, whimsical touch to any sanctuary.",
         price: 499,
         images: [
-            "images/heartglassjar1.png", 
-            "images/heartglassjar2.png",
-            "images/heartglassjar3.png",
-            "images/heartglassjar4.png",     
+            "heartglassjar1.png", 
+            "heartglassjar2.png",
+            "heartglassjar3.png",
+            "heartglassjar4.png",     
         ],
         scentProfile: {
             top: "Sweet, Fresh",
@@ -106,10 +106,10 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this thoughtful candle reveals a personalized, hidden message as it burns, making it the perfect bespoke gift for someone special.",
         price: 449,
         images: [
-            "images/secretmessage1.png", 
-            "images/secretmessage2.png",
-            "images/secretmessage3.png",
-            "images/secretmessage4.png",
+            "secretmessage1.png", 
+            "secretmessage2.png",
+            "secretmessage3.png",
+            "secretmessage4.png",
         ],
         scentProfile: {
             top: ": Calming Lavender, Soft Bergamot",
@@ -124,9 +124,9 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this festive, hyper-realistic Ladoo candle brings a touch of traditional warmth and bespoke fragrance to your celebrations.",
         price: 45,
         images: [
-            "images/ladoo2.jpeg", 
-            "images/ladoo1.jpeg",
-            "images/ladoo3.jpeg",
+            "ladoo2.jpeg", 
+            "ladoo1.jpeg",
+            "ladoo3.jpeg",
         ],
         scentProfile: {
             top: "Sweet Saffron, Cardamom",
@@ -141,9 +141,9 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this festive, hyper-realistic Modak candle brings a touch of traditional warmth and bespoke fragrance to your celebrations.",
         price: 39,
         images: [
-            "images/modak1.jpeg", 
-            "images/modak2.jpeg",
-            "images/modak3.jpeg", 
+            "modak1.jpeg", 
+            "modak2.jpeg",
+            "modak3.jpeg", 
         ],
         scentProfile: {
             top: "Sweet Jaggery, Coconut",
@@ -158,9 +158,9 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this charming heart-shaped candle is available in a bespoke selection of vibrant colors and curated fragrances, making it the perfect aromatic statement piece for any romantic occasion",
         price: 25,
         images: [
-            "images/heart1.jpeg", 
-            "images/heart2.jpeg",
-            "images/heart3.jpeg",
+            "heart1.jpeg", 
+            "heart2.jpeg",
+            "heart3.jpeg",
         ],
         scentProfile: {
             top: "Sweet Berries, Fresh Petals",
@@ -175,11 +175,11 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this playful and hyper-realistic iced latte candle brings a unique, coffee-inspired warmth and bespoke fragrance to any space.",
         price: 599,
         images: [
-             "images/icelatte3.png", 
-            "images/icelatte4.png",
-            "images/icelatte1.jpeg",
-            "images/icelatte5.png",
-            "images/icelatte2.jpeg",
+             "icelatte3.png", 
+            "icelatte4.png",
+            "icelatte1.jpeg",
+            "icelatte5.png",
+            "icelatte2.jpeg",
 
         ],
         scentProfile: {
@@ -195,9 +195,9 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, this beautifully designed card candle features a delicate floral topper and a heartfelt message, making it the perfect bespoke gift for your loved ones.",
         price: 69,
         images: [
-             "images/flowercard1.png", 
-            "images/flowercard2.png",
-            "images/flowercard3.png",
+             "flowercard1.png", 
+            "flowercard2.png",
+            "flowercard3.png",
         ],
         scentProfile: {
             top: "Fresh Spring Air, Dewy Petals",
@@ -212,11 +212,11 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, these charming daisy-shaped candles are available in a bespoke selection of vibrant colors and curated fragrances, making them a whimsical, aromatic statement piece for any sanctuary.",
         price: 49,
         images: [
-             "images/daisysmall1.jpeg", 
-            "images/daisysmall2.jpeg",
-            "images/daisysmall3.jpeg",
-            "images/daisysmall4.jpeg",
-            "images/daisysmall5.jpeg",
+             "daisysmall1.jpeg", 
+            "daisysmall2.jpeg",
+            "daisysmall3.jpeg",
+            "daisysmall4.jpeg",
+            "daisysmall5.jpeg",
         ],
         scentProfile: {
             top: "Fresh Spring Air, Dewy Petals",
@@ -231,9 +231,9 @@ const candleInventory = [
         description: "Handcrafted with 100% natural soy wax, these charming peony-shaped candles are available in a bespoke selection of vibrant colors and curated fragrances, making them a dreamy, aromatic statement piece for any sanctuary.",
         price: 49,
         images: [
-            "images/peonysmall1.jpeg", 
-            "images/peonysmall2.jpeg",
-            "images/peonysmall3.jpeg",
+            "peonysmall1.jpeg", 
+            "peonysmall2.jpeg",
+            "peonysmall3.jpeg",
         ],
         scentProfile: {
             top: "Fresh Petals, Spring Air",
@@ -248,7 +248,7 @@ const candleInventory = [
         description: "Handcrafted with 100% natural, sustainable materials, this bespoke gift hamper allows you to curate a unique selection of your favorite candles and scents, making it the perfect personalized gift for any special occasion.",
         price: 00,
         images: [
-            "images/customisablehamper.jpeg", 
+            "customisablehamper.jpeg", 
         ],
         scentProfile: {
             top: "Customizable based on selection",
