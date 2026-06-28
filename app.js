@@ -5,7 +5,7 @@
 const SETTINGS = {
     whatsappNumber: "918080229051",      // Verified Active Order Channel
     instagramHandle: "flameies",         // Verified Brand Instagram Hook
-    adminPassword: "flameiesadmin123"    // 🔒 Change your admin password here
+    adminPassword: "flameies_Admin*8080"    // 🔒 Change your admin password here
 };
 
 let shoppingCartMemory = {};
