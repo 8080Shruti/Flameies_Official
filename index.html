@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flameies | Handcrafted Luxury Organic Candles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="storefront-app">
+        <nav class="navbar">
+            <div class="logo-image-container" onclick="navigateTo('home')" style="cursor: pointer; display: flex; align-items: center; gap: 12px;">
+                <img src="images/logo.png" alt="Flameies Brand Logo" style="height: 40px; width: auto; object-fit: contain;">
+                <span style="font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: 0.25em; color: #ffffff; font-weight: 400;">FLAMEIES</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#collection" onclick="navigateTo('collection')">Collection</a></li>
+                <li><a href="#reviews" onclick="navigateTo('reviews')">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <div id="view-home" class="page-view active-view">
+    <header class="hero">
+        <!-- Video path updated to your local folder: video/1000149139.mp4 -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="video/herovideo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Hand-Poured • Botanical Soy Wax • Clean Burning</p>
+            <h1>Light for the Mind & Space</h1>
+            <button onclick="navigateTo('collection')" class="btn-primary">Enter The Collection</button>
+        </div>
+    </header>
+    <!-- ... rest of your code remains unchanged ... -->
+
+            <section class="philosophy-section">
+                <div class="container-small">
+                    <span class="section-tag">The Philosophy</span>
+                    <h2>Minimal design. Maximum serenity.</h2>
+                    <p class="philosophy-text">Every Flameies candle is meticulously crafted using pure, sustainable soy wax and curated botanical essential oils. Designed with an uncompromising luxury aesthetic to blend seamlessly into your ritual spaces, bringing an atmosphere of calm, intentional living to your home.</p>
+                </div>
+            </section>
+            
+            <section class="lookbook-banner" onclick="navigateTo('collection')">
+                <div class="lookbook-content">
+                    <span>The Autumn Drop</span>
+                    <h3>Explore Scent Profiles</h3>
+                    <p>Discover notes of French Lavender, Amber, and Madagascar Vanilla.</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-collection" class="page-view">
+            <section class="collection-section">
+                <div class="container">
+                    <span class="section-tag">Curated Collection</span>
+                    <h2 class="view-title-editorial">The Core Series</h2>
+                    <div class="product-grid" id="product-grid"></div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-reviews" class="page-view">
+            <section class="reviews-section">
+                <div class="container">
+                    <span class="section-tag">The Experience</span>
+                    <h2 class="reviews-title">Loved by our Community</h2>
+                    
+                    <div class="review-form-wrapper">
+                        <h3>Share Your Experience</h3>
+                        <form id="real-review-form" class="luxury-form">
+                            <div class="form-row">
+                                <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                                <input type="text" id="reviewer-city" placeholder="Your City" required>
+                            </div>
+                            <textarea id="reviewer-text" rows="3" placeholder="Write your review here..." required></textarea>
+                            <button type="submit" class="btn-submit-review">Submit Review</button>
+                        </form>
+                    </div>
+                    <div class="reviews-grid" id="live-reviews-container"></div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-admin" class="page-view">
+            <section class="collection-section" style="background-color: #f2eee5; min-height: 80vh;">
+                <div class="container" style="max-width: 900px;">
+                    <span class="section-tag">Flameies Control Center</span>
+                    <h2 class="view-title-editorial" style="margin-bottom: 20px;">Private Order Log</h2>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px; font-style: italic;">Verify your customer payments here, then click print to generate their official stamped receipts.</p>
+                    
+                    <div id="admin-log-target" class="admin-dashboard-list"></div>
+                </div>
+            </section>
+        </div>
+
+        <div id="checkout-modal" class="modal-overlay">
+            <div class="modal-box">
+                <button class="modal-close" onclick="closeCheckout()">&times;</button>
+                <h3>Your Order Sheet</h3>
+                <div id="modal-cart-items" class="modal-cart-list"></div>
+                <div class="modal-total-bar">
+                    <strong>Grand Total:</strong>
+                    <span id="modal-grand-total">₹0</span>
+                </div>
+                <form id="checkout-form" class="luxury-form">
+                    <input type="text" id="cust-name" placeholder="Full Name" required>
+                    <input type="tel" id="cust-phone" placeholder="Phone Number" required>
+                    <textarea id="cust-address" rows="3" placeholder="Full Delivery Address with Pincode" required></textarea>
+                    <button type="submit" class="btn-submit-order">Send Order to WhatsApp</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="lightbox-modal" class="lightbox-overlay" onclick="closeLightbox()">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-target-img" src="" alt="Enlarged Luxury Product View">
+        </div>
+
+        <footer>
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <img src="images/logo.png" alt="Flameies Logo" style="height: 40px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                        <h2 style="font-family: var(--font-serif); font-size: 1.7rem; letter-spacing: 0.2em; font-weight: 300; margin-bottom: 0; color: var(--text-light);">FLAMEIES</h2>
+                    </div>
+                    <p>Artisanal Home Fragrances</p>
+                </div>
+                <div class="footer-details">
+                    <p>Based in Mumbai, India</p>
+                    <p>Instagram: <a href="https://www.instagram.com/flameies?igsh=MTBwdTZ4eWk0aDA2Zw==" target="_blank">@flameies</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Flameies. Handcrafted with intention.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="invoice-modal" class="invoice-overlay-modal">
+        <div class="invoice-modal-content">
+            <div class="invoice-admin-bar">
+                <button onclick="triggerNativePrint()" class="btn-print-now">Click to Save as PDF / Print</button>
+                <button onclick="closeInvoiceModal()" class="btn-print-close">Close & Go Back</button>
+            </div>
+
+            <div class="invoice-wrapper" id="printable-invoice-area">
+                <div class="invoice-header">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;">
+                        <img src="images/logo.png" alt="Flameies Brand Logo" style="height: 45px; width: auto; object-fit: contain;">
+                        <h1 class="invoice-logo" style="font-size: 2.3rem; margin-bottom: 0; letter-spacing: 0.15em;">FLAMEIES</h1>
+                    </div>
+                    <div class="invoice-meta">
+                        <h2>OFFICIAL RECEIPT</h2>
+                        <p><strong>Date:</strong> <span id="inv-date"></span></p>
+                        <p><strong>Invoice ID:</strong> <span id="inv-id"></span></p>
+                        <p><span class="payment-badge-paid">PAYMENT STATUS: PAID</span></p>
+                    </div>
+                </div>
+                
+                <div class="invoice-billing-details">
+                    <div>
+                        <h3>Issued By:</h3>
+                        <p><strong>Flameies Studio Inc.</strong></p>
+                        <p>Nallasopara, Mumbai, MH</p>
+                        <p>India - 400064</p>
+                    </div>
+                    <div>
+                        <h3>Delivered To:</h3>
+                        <p><strong id="inv-cust-name"></strong></p>
+                        <p id="inv-cust-phone"></p>
+                        <p id="inv-cust-address" style="max-width: 250px; line-height: 1.4;"></p>
+                    </div>
+                </div>
+
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Product Description</th>
+                            <th style="text-align: center;">Qty</th>
+                            <th style="text-align: right;">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-items-rows"></tbody>
+                </table>
+
+                <div class="invoice-summary-grid">
+                    <div class="invoice-thankyou-note">
+                        <p>Thank you for choosing conscious luxury. Your candle was hand-poured with intention.</p>
+                    </div>
+                    
+                    <div class="invoice-total-block">
+                        <div class="total-row"><span>Subtotal:</span><span id="inv-subtotal"></span></div>
+                        <div class="total-row"><span>Shipping Charges:</span><span>₹0.00 (Free)</span></div>
+                        <div class="total-row grand-total-row"><span>Grand Total:</span><span id="inv-grandtotal"></span></div>
+                        
+                        <div class="flameies-stamp">
+                            <div class="stamp-inner">
+                                <span>FLAMEIES</span>
+                                <span class="stamp-date">PAID & COMPLETED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="invoice-footer">
+                    <p>This is a computer-generated, digitally signed payment voucher confirmation slip.</p>
+                    <p>For support or custom batch tracking, connect with us at @flameies</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
